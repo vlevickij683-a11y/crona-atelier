@@ -1,0 +1,22 @@
+/* Shared finishing rules keep edited content readable across both themes. */
+:root:not([data-theme=dark]){--muted:#6c6358;--bronze:#795c40}
+.phase-note{color:var(--bronze)}
+.skip-content{position:fixed;top:12px;left:12px;z-index:60;transform:translateY(-180%);padding:13px 18px;background:var(--paper);color:var(--ink);border:2px solid var(--focus);border-radius:5px;font-size:13px;text-decoration:none}
+.skip-content:focus{transform:none}
+main:focus{outline:none}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:3px}
+.product-info>p{font-size:12px}.product-category,.stock{font-size:10px}
+.product-badges>span{max-width:100%;overflow-wrap:anywhere}
+.hero-object-caption>span:first-child,.selected-product-heading>div,.removed-product>span{min-width:0;overflow-wrap:anywhere}
+.hero-object-caption strong,.detail-subtitle,.editor-product-list span,.tutorial-copy{overflow-wrap:anywhere}
+.detail-copy{min-width:0}.detail-price .product-price,.product-meta .product-price{overflow-wrap:anywhere}
+.editor-panel-scroll summary{padding-block:4px}
+@media(max-width:600px){
+ .product-info>p{font-size:12px}.stock{font-size:11px}.product-category{font-size:10px}
+ .hero-description,.detail-description{font-size:14px}.detail-disclaimer{font-size:11px}
+ .category-filters button,.tutorial-skip,.editor-link{min-height:44px}
+ .category-filters button{font-size:11px}
+ .catalog-tools select{font-size:16px;max-width:100%;min-height:44px}
+ .catalog-tools{flex-wrap:wrap}.catalog-tools label{min-width:0;max-width:100%}
+ .settings-language{min-height:44px}
+}

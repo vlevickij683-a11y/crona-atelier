@@ -1,0 +1,23 @@
+.tutorial-layer{position:fixed;inset:0;z-index:40;pointer-events:none;color:var(--ink);font-family:'Manrope',Arial,sans-serif}
+.tutorial-spotlight{position:absolute;border-radius:9px;box-shadow:0 0 0 100vmax rgb(12 11 9 / .46);outline:2px solid var(--bronze);outline-offset:2px;pointer-events:none}
+.tutorial-card{position:absolute;width:min(300px,calc(100% - 24px));padding:22px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 60px #0003;pointer-events:auto;overflow:auto;overscroll-behavior:contain;outline:none}
+.tutorial-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:19px;font-size:9px;color:var(--muted)}
+.tutorial-top>span{letter-spacing:.05em;white-space:nowrap}
+.tutorial-skip{display:flex;align-items:center;gap:7px;border:0;background:transparent;color:var(--muted);padding:8px 0 8px 6px;font:inherit;font-size:10px;min-height:32px}
+.tutorial-skip>span{font-size:20px;line-height:1}
+.tutorial-copy h2{font:500 30px/1.12 var(--serif);margin:0 0 13px}
+.tutorial-copy p{font-size:12px;line-height:1.75;margin:0;color:var(--muted)}
+.tutorial-copy .tutorial-control{margin-top:12px;color:var(--ink)}
+.tutorial-action{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:12px 14px;margin-top:18px;border:1px solid var(--ink);border-radius:5px;background:var(--ink);color:var(--paper);font:inherit;font-size:11px}
+.tutorial-action span{font-size:18px}.tutorial-restore{margin-top:12px;background:transparent;border:0;color:var(--ink);font:inherit;font-size:11px;text-decoration:underline;padding:8px 0}
+.tutorial-progress{display:flex;gap:5px;margin-top:20px}.tutorial-progress span{height:2px;flex:1;background:var(--line)}.tutorial-progress .filled{background:var(--bronze)}
+.tutorial-skip:focus-visible,.tutorial-action:focus-visible,.tutorial-restore:focus-visible{outline:2px solid var(--bronze);outline-offset:4px}
+.tutorial-result .tutorial-spotlight{animation:lunar-balance .7s ease-out}
+@keyframes lunar-balance{from{outline-offset:9px;outline-width:4px}to{outline-offset:2px;outline-width:2px}}
+.tutorial-stock-change [data-product-id="moon"] .stock{animation:lunar-stock .6s ease-out}
+@keyframes lunar-stock{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:600px){.tutorial-card{padding:16px}.tutorial-top{margin-bottom:12px}.tutorial-copy h2{font-size:26px}.tutorial-copy p{font-size:11px;line-height:1.6}.tutorial-progress{margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.tutorial-result .tutorial-spotlight,.tutorial-stock-change [data-product-id="moon"] .stock{animation:none}}
+
+
+.tutorial-stock-change [data-product-id="moon"] .stock{scroll-margin-top:20vh}
